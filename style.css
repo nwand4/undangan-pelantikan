@@ -1,0 +1,303 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background: #f8f8f5;
+  color: #0d4f45;
+}
+
+/* =========================
+   GAMBAR UNDANGAN
+========================= */
+
+.gallery{
+  width: 100%;
+}
+
+.gallery{
+  width: 100%;
+}
+
+.image-wrapper{
+  position: relative;
+
+  max-width: 900px;
+  margin: auto;
+}
+
+.image-wrapper img{
+  width: 100%;
+
+  display: block;
+}
+
+/* FADE ATAS & BAWAH */
+
+.image-wrapper::before,
+.image-wrapper::after{
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  width: 100%;
+  height: 100px;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+/* FADE ATAS */
+
+.image-wrapper::before{
+  top: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(255,255,255,0),
+    #ffffff
+  );
+}
+
+/* FADE BAWAH */
+
+.image-wrapper::after{
+  bottom: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    #ffffff
+  );
+}
+
+/* =========================
+   SECTION RSVP
+========================= */
+
+.form-section{
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 35px;
+  background: #f8faf8;
+  /* border-top: 2px solid #d4af37; */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* GARIS ORNAMEN */
+
+.ornament-line{
+  width: 140px;
+  height: 4px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d4af37,
+    transparent
+  );
+
+  margin: 0 auto 35px auto;
+}
+
+/* JUDUL */
+
+.form-section h2{
+  text-align: center;
+
+  font-size: 32px;
+  color: #0d4f45;
+
+  margin-bottom: 15px;
+
+  letter-spacing: 1px;
+}
+
+/* DESKRIPSI */
+
+.form-desc{
+  text-align: center;
+
+  max-width: 600px;
+  margin: auto;
+
+  line-height: 1.8;
+
+  color: #555;
+
+  margin-bottom: 40px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+form{
+  max-width: 650px;
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+/* INPUT & SELECT */
+
+input,
+select{
+  width: 100%;
+
+  padding: 17px;
+
+  border: 2px solid #d4af37;
+  border-radius: 14px;
+
+  background: #fcfcfa;
+
+  font-size: 16px;
+  color: #0d4f45;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+/* FOCUS */
+
+input:focus,
+select:focus{
+  border-color: #0d4f45;
+
+  box-shadow: 0 0 12px rgba(212,175,55,0.25);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+  padding: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #0d4f45,
+    #146b5d
+  );
+
+  color: white;
+
+  border: 2px solid #d4af37;
+  border-radius: 18px;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* HOVER BUTTON */
+
+button:hover{
+  background: #0a3d36;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* STATUS */
+
+#status{
+  text-align: center;
+
+  margin-top: 20px;
+
+  font-weight: bold;
+
+  color: #0d4f45;
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media(max-width:768px){
+
+  .form-section{
+    padding: 45px 18px;
+  }
+
+  .form-section h2{
+    font-size: 26px;
+  }
+
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.success-box{
+  text-align: center;
+
+  padding: 50px 20px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.check-icon{
+  width: 80px;
+  height: 80px;
+
+  margin: auto auto 25px auto;
+
+  border-radius: 50%;
+
+  background: #0d4f45;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.success-box h3{
+  color: #0d4f45;
+
+  font-size: 28px;
+
+  margin-bottom: 15px;
+}
+
+.success-box p{
+  color: #666;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+button:disabled{
+  opacity: 0.7;
+  cursor: not-allowed;
+}

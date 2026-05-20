@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Undangan Pelantikan</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- GAMBAR UNDANGAN -->
+  <section class="gallery">
+
+    <section class="gallery">
+
+  <div class="image-wrapper">
+    <img src="images/udg1.jpeg">
+  </div>
+
+  <div class="image-wrapper">
+    <img src="images/udg2.jpeg">
+  </div>
+
+  <div class="image-wrapper">
+    <img src="images/udg3.jpeg">
+  </div>
+
+</section>
+
+  </section>
+
+  <!-- FORM RSVP -->
+  <section class="form-section">
+
+    <h2>Konfirmasi Kehadiran</h2>
+
+    <form id="rsvpForm">
+
+      <input 
+        type="text" 
+        name="nama" 
+        placeholder="Nama Lengkap"
+        required
+      >
+
+      <input 
+        type="text" 
+        name="jabatan" 
+        placeholder="Jabatan"
+        required
+      >
+
+      <select name="partisipan" required>
+        <option value="">Pilih Partisipan</option>
+        <option value="Peserta">Peserta</option>
+        <option value="Tamu Undangan">Tamu Undangan</option>
+      </select>
+
+      <select name="kehadiran" required>
+  <option value="">
+    Konfirmasi Kehadiran
+  </option>
+
+  <option value="Hadir">
+    Hadir
+  </option>
+
+  <option value="Tidak Hadir">
+    Tidak Hadir
+  </option>
+</select>
+
+      <button type="submit">
+        Kirim Konfirmasi
+      </button>
+
+    </form>
+
+    <p id="status"></p>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
