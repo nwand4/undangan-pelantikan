@@ -7,26 +7,21 @@ form.addEventListener("submit", async (e) => {
 
   e.preventDefault();
 
-  /* AMBIL BUTTON */
   const button = form.querySelector("button");
 
-  /* UBAH BUTTON SAAT LOADING */
   button.disabled = true;
   button.innerHTML = "Mengirim Konfirmasi...";
 
   try{
 
-    const response = await fetch(scriptURL, {
+    await fetch(scriptURL, {
       method: "POST",
+      mode: "no-cors",
       body: new FormData(form)
     });
 
-    await response.text();
-
-    /* SEMBUNYIKAN FORM */
     form.style.display = "none";
 
-    /* TAMPILKAN SUCCESS */
     statusText.innerHTML = `
       <div class="success-box">
 
