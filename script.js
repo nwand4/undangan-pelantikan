@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbz1rmKiuhC68BZbJF443XlEYgeu1J9q1TWIrTk0rk8eg377BI-GC1r4fvowldddqbEXaw/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycby1g0-IcV698H4Ov3T-RaXj3GDFERwGO2p3NNlobb-x6MHU1a28yNS4_9Oxi9-2Rys/exec";
 
 const form = document.getElementById("rsvpForm");
 const statusText = document.getElementById("status");
